@@ -1,4 +1,3 @@
-using BusinessLayer.Abstract.More;
 using BusinessLayer.Abstract;
 using BusinessLayer.Concrete;
 using DataAccessLayer.Abstract;
@@ -48,7 +47,9 @@ namespace Ramada_Hotel_WebApi
             services.AddScoped<ITestimonialDal, EfTestimonialDal>();
             services.AddScoped<ITestimonialService, TestimonialManager>();
 
-         
+            services.AddAutoMapper(typeof(Startup));
+
+            
 
 
             services.AddCors(opt =>
@@ -124,6 +125,3 @@ namespace Ramada_Hotel_WebApi
 //services.AddScoped<IAppUserService, AppUserManager>();
 
 
-//services.AddAutoMapper(typeof(Startup));
-
-// services.AddScoped

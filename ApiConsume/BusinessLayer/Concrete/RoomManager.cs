@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-    public class RoomManagerr : IRoomService
+    public class RoomManager : IRoomService
     {
         private readonly IRoomDal _roomDal;
-        public RoomManagerr(IRoomDal roomDal)
+        public RoomManager(IRoomDal roomDal)
         {
             _roomDal = roomDal;
         }

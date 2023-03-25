@@ -1,3 +1,9 @@
+using BusinessLayer.Abstract.More;
+using BusinessLayer.Abstract;
+using BusinessLayer.Concrete;
+using DataAccessLayer.Abstract;
+using DataAccessLayer.Concrete;
+using DataAccessLayer.EntityFramework;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -25,13 +31,43 @@ namespace Ramada_Hotel_WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<Context>();
+
+            services.AddScoped<IStaffDal, EfStaffDal>();
+            services.AddScoped<IStaffService, StaffManager>();
+
+            services.AddScoped<IServicesDal, EfServiceDal>();
+            services.AddScoped<IServiceService, ServiceManager>();
+
+            services.AddScoped<IRoomDal, EfRoomDal>();
+            services.AddScoped<IRoomService, RoomManager>();
+
+            services.AddScoped<ISubscribeDal, EfSubscribeDal>();
+            services.AddScoped<ISubscribeService, SubscribeManager>();
+
+            services.AddScoped<ITestimonialDal, EfTestimonialDal>();
+            services.AddScoped<ITestimonialService, TestimonialManager>();
+
+         
+
+
+            services.AddCors(opt =>
+            {
+                opt.AddPolicy("OtelApiCors", opts =>
+                {
+                    opts.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+                });
+            });
+
+
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Ramada_Hotel_WebApi", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "HotelProject.WebApi", Version = "v1" });
             });
         }
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -45,6 +81,9 @@ namespace Ramada_Hotel_WebApi
 
             app.UseRouting();
 
+            //app.UseStaticFiles();
+            app.UseCors("OtelApiCors");
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -54,3 +93,37 @@ namespace Ramada_Hotel_WebApi
         }
     }
 }
+
+
+
+
+
+
+//services.AddScoped<IAboutDal, EfAboutDal>();
+//services.AddScoped<IAboutService, AboutManager>();
+
+//services.AddScoped<IBookingDal, EfBookingDal>();
+//services.AddScoped<IBookingService, BookingManager>();
+
+//services.AddScoped<IContactDal, EfContactDal>();
+//services.AddScoped<IContactService, ContactManager>();
+
+//services.AddScoped<IGuestDal, EfGuestDal>();
+//services.AddScoped<IGuestService, GuestManager>();
+
+//services.AddScoped<ISendMessageDal, EfSendMessageDal>();
+//services.AddScoped<ISendMessageService, SendMessageManager>();
+
+//services.AddScoped<IMessageCategoryDal, EfMessageCategoryDal>();
+//services.AddScoped<IMessageCategoryService, MessageCategoryManager>();
+
+//services.AddScoped<IWorkLocationDal, EfWorkLocationDal>();
+//services.AddScoped<IWorkLocationService, WorkLocationManager>();
+
+//services.AddScoped<IAppUserDal, EfAppUserDal>();
+//services.AddScoped<IAppUserService, AppUserManager>();
+
+
+//services.AddAutoMapper(typeof(Startup));
+
+// services.AddScoped

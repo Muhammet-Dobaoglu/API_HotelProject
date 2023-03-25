@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTOLayer.DTOs.TestimonialDto
 {
-    public class TestimonialDto
+    public class TestimonialAddDto
     {
     }
 }

@@ -7,17 +7,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiConsume", "ApiConsume", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{0D4471F1-B64D-4227-9E98-7341BF3497A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ramada_Hotel_WebApi", "ApiConsume\Ramada_Hotel_WebApi\Ramada_Hotel_WebApi.csproj", "{19965AF9-E740-4DC3-A6AD-9B104AB8F18C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ramada_Hotel_WebApi", "ApiConsume\Ramada_Hotel_WebApi\Ramada_Hotel_WebApi.csproj", "{19965AF9-E740-4DC3-A6AD-9B104AB8F18C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityLayer", "ApiConsume\EntityLayer\EntityLayer.csproj", "{40E75A70-C11B-4752-9F77-06E3BFF01388}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityLayer", "ApiConsume\EntityLayer\EntityLayer.csproj", "{40E75A70-C11B-4752-9F77-06E3BFF01388}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "ApiConsume\DataAccessLayer\DataAccessLayer.csproj", "{943ED7C3-73E1-4279-9EA6-5D2A59E94D46}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccessLayer", "ApiConsume\DataAccessLayer\DataAccessLayer.csproj", "{943ED7C3-73E1-4279-9EA6-5D2A59E94D46}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "ApiConsume\BusinessLayer\BusinessLayer.csproj", "{FE5EC026-0576-4A68-ACBF-F4E83C1A9E8A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLayer", "ApiConsume\BusinessLayer\BusinessLayer.csproj", "{FE5EC026-0576-4A68-ACBF-F4E83C1A9E8A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTOLayer", "ApiConsume\DTOLayer\DTOLayer.csproj", "{8665C01F-576C-41E5-B567-22F68574167B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DTOLayer", "ApiConsume\DTOLayer\DTOLayer.csproj", "{8665C01F-576C-41E5-B567-22F68574167B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ramada_Hotel_WebUI", "Ramada_Hotel_WebUI\Ramada_Hotel_WebUI.csproj", "{94D94B81-5864-4D34-8580-D91597155EEF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ramada_Hotel_WebUI", "Ramada_Hotel_WebUI\Ramada_Hotel_WebUI.csproj", "{94D94B81-5864-4D34-8580-D91597155EEF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RapidApi", "RapidApi", "{DE5EE14E-2471-411C-B483-9AC163B958A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RapidApiConsume", "RapidApi\RapidApiConsume\RapidApiConsume.csproj", "{835DD798-E2F3-433E-BA77-3112B36FAD75}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +53,10 @@ Global
 		{94D94B81-5864-4D34-8580-D91597155EEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94D94B81-5864-4D34-8580-D91597155EEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94D94B81-5864-4D34-8580-D91597155EEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{835DD798-E2F3-433E-BA77-3112B36FAD75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{835DD798-E2F3-433E-BA77-3112B36FAD75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{835DD798-E2F3-433E-BA77-3112B36FAD75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{835DD798-E2F3-433E-BA77-3112B36FAD75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +68,7 @@ Global
 		{FE5EC026-0576-4A68-ACBF-F4E83C1A9E8A} = {0BA317C2-2557-49B7-B344-E3A64DA5F4E9}
 		{8665C01F-576C-41E5-B567-22F68574167B} = {0BA317C2-2557-49B7-B344-E3A64DA5F4E9}
 		{94D94B81-5864-4D34-8580-D91597155EEF} = {0D4471F1-B64D-4227-9E98-7341BF3497A2}
+		{835DD798-E2F3-433E-BA77-3112B36FAD75} = {DE5EE14E-2471-411C-B483-9AC163B958A7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D8165071-48F0-4CDD-810D-D9F20F6AF474}

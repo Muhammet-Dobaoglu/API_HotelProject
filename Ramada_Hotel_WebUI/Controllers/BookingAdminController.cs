@@ -18,7 +18,7 @@ namespace Ramada_Hotel_WebUI.Controllers
         public async Task<IActionResult> Index()
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync("http://localhost:3523/api/Booking");
+            var responseMessage = await client.GetAsync("http://localhost:20089/api/Booking");
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
@@ -32,7 +32,7 @@ namespace Ramada_Hotel_WebUI.Controllers
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(resultBookingDto);
             StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-            var responseMessage = await client.PutAsync("http://localhost:3523/api/Booking/bbbb", stringContent);
+            var responseMessage = await client.PutAsync("http://localhost:20089/api/Booking/bbbb", stringContent);
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index");

@@ -9,6 +9,6 @@ namespace BusinessLayer.Abstract
 {
     public interface IContactService : IGenericService<Contact>
     {
-        //public int TGetContactCount();
+        public int TGetContactCount();
     }
 }

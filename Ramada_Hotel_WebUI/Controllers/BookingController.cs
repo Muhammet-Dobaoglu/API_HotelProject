@@ -32,7 +32,7 @@ namespace Ramada_Hotel_WebUI.Controllers
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(createBookingDto);
             StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-            await client.PostAsync("http://localhost:3523/api/Booking", stringContent);
+            await client.PostAsync("http://localhost:20089/api/Booking", stringContent);
             return RedirectToAction("Index", "Default");
         }
     }

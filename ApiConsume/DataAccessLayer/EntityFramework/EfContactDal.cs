@@ -17,10 +17,10 @@ namespace DataAccessLayer.EntityFramework
 
         }
 
-        //public int GetContactCount()
-        //{
-        //    var context = new Context();
-        //    return context.Contacts.Count();
-        //}
+        public int GetContactCount()
+        {
+            var context = new Context();
+            return context.Contacts.Count();
+        }
     }
 }

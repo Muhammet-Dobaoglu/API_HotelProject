@@ -42,9 +42,9 @@ namespace BusinessLayer.Concrete
             throw new NotImplementedException();
         }
 
-        //public List<AppUser> TUserListWithWorkLocation()
-        //{
-        //    return _appUserDal.UserListWithWorkLocation();
-        //}
+        public List<AppUser> TUserListWithWorkLocation()
+        {
+            return _appUserDal.UserListWithWorkLocation();
+        }
     }
 }

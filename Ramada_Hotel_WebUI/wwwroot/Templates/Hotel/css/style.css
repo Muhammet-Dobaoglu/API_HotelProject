@@ -231,11 +231,10 @@
     position: relative;
     height: 100%;
     min-height: 500px;
-    background: linear-gradient(rgba(15, 23, 43, .1), rgba(15, 23, 43, .1)), url(../img/video.jpg);
-    background-position: center center;
+    background: linear-gradient(rgba(15, 23, 43, .1), rgba(15, 23, 43, .1)), url(https://cf.bstatic.com/xdata/images/hotel/max1024x768/184305239.jpg?k=2d22fe63ae1f8960e057238c98fb436f7bd9f65854e3a5e918607c5cfa1d0a52&o=&hp=1);
     background-repeat: no-repeat;
     background-size: cover;
-}
+}/*../img/video.jpg background-position: center center;*/
 
 .video .btn-play {
     position: absolute;

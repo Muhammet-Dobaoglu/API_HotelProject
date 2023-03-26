@@ -9,6 +9,6 @@ namespace BusinessLayer.Abstract
 {
     public interface ISendMessageService : IGenericService<SendMessage>
     {
-        //public int TGetSendMessageCount();
+        public int TGetSendMessageCount();
     }
 }

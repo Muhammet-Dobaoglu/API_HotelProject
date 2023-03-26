@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccessLayer.EntityFramework.More
+namespace DataAccessLayer.EntityFramework
 {
     public class EfSendMessageDal : GenericRepository<SendMessage>, ISendMessageDal
     {

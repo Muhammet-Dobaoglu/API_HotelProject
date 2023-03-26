@@ -1,4 +1,4 @@
-﻿@model List<ApiMovieViewModel>
+﻿@model List<ApiMovieViewModel.Genre>
 @{
     Layout = null;
 }
@@ -8,19 +8,15 @@
     <br /><br />
     <table class="table table-bordered">
         <tr>
-            <th>#</th>
-            <th>Film Adı</th>
-            <th>Puanı</th>
-            <th>Fragman</th>
+            <th>id</th>
+            <th>Tür</th>  
         </tr>
-        @foreach(var item in Model)
-            {
-                <tr>
-                    <td>@item.rank</td>
-                    <td>@item.title</td>
-                    <td>@item.rating</td>
-                    <td><a href="#" class="btn btn-dark">Fragmanı Oynat</a></td>
-                </tr>
-            }
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.id</td>
+                <td>@item.name</td>
+            </tr>
+        }
     </table>
 </div>

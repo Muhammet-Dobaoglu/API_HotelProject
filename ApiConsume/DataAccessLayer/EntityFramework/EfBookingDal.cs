@@ -31,6 +31,7 @@ namespace DataAccessLayer.EntityFramework
             var values = context.Bookings.Find(id);
             values.Status = "Onaylandı";
             context.SaveChanges();
+
         }
     }
 }
